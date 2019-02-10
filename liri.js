@@ -10,6 +10,7 @@ const axios = require('axios')
 // Hold user action
 let action = process.argv[2]
 
+
 //User Options
 switch (action) {
 case "concert-this":
@@ -38,6 +39,13 @@ console.log('Please provide and instruction')
 function searchMovie(){
      let movieName = (process.argv).slice(3)    
      movieName = movieName.join('+')
+
+     //Check to make input
+     if (movieName){
+          movieName = movieName
+     }else{
+          movieName ='Mr. Nobody'
+     }
     
 
 // request OMBD API
@@ -59,6 +67,8 @@ axios.get(queryUrl).then(
         Plot of the movie:${response.data.Plot}
         Actors in the movie:${response.data.Actors}
         Poster of the movie:${response.data.Poster}
+
+        
         `)
      }
 );
@@ -66,3 +76,16 @@ axios.get(queryUrl).then(
 
 
 
+
+
+// function playSpotify(){
+// spotify
+//   .search({ type: 'track', query: 'I Want it That Way',limit:1 })
+//   .then(function(response) {
+//     console.log(response);
+//   })
+//   .catch(function(err) {
+//     console.log(err);
+//   });
+
+// }
