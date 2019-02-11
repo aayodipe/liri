@@ -1,1 +1,114 @@
-concert-this Jackie Rylee Professional Pianist, concert-this fidlar, movie-this avenger, spotify-this-song alone, 
+1 
+          Name of the Venue:   White Oak Music Hall
+          Venue Location:      Houston, TX, United States
+          Date of the Event:   02/15/2019
+          
+...............................................
+1 
+          Name of the Venue:   Minibar
+          Venue Location:      Kansas City, MO, United States
+          Date of the Event:   02/11/2019
+          
+...............................................
+1 
+        Title:        Mr. Nobody
+        Year:         2009
+        IMDB Rating:  7.8
+        RT. Rating:   R
+        Country:      Belgium, Germany, Canada, France, USA, UK
+        Language:     English, Mohawk
+        Plot:         A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+        Actors:       Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+        Poster:       https://m.media-amazon.com/images/M/MV5BMTg4ODkzMDQ3Nl5BMl5BanBnXkFtZTgwNTEwMTkxMDE@._V1_SX300.jpg
+        
+...............................................
+1 
+        Title:        Black Panther
+        Year:         2018
+        IMDB Rating:  7.4
+        RT. Rating:   PG-13
+        Country:      USA, South Africa, South Korea, Australia
+        Language:     Swahili, Nama, English, Xhosa, Korean
+        Plot:         T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.
+        Actors:       Chadwick Boseman, Michael B. Jordan, Lupita Nyong'o, Danai Gurira
+        Poster:       https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX300.jpg
+        
+...............................................
+1 
+     Artist(s):          Various Artists
+
+     Song's name:        Scared of the Dark (feat. XXXTENTACION)
+
+     Spotify Preview:    null
+
+     Album:              Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture)
+         
+...............................................
+1 
+          Name of the Venue:   Minibar
+          Venue Location:      Kansas City, MO, United States
+          Date of the Event:   02/11/2019
+          
+...............................................
+1 
+     Artist(s):          Ed Sheeran
+
+     Song's name:        Shape of You
+
+     Spotify Preview:    https://p.scdn.co/mp3-preview/84462d8e1e4d0f9e5ccd06f0da390f65843774a2?cid=ff7f431a06364134a0e7aab9f4860cb8
+
+     Album:              ÷ (Deluxe)
+         
+...............................................
+1 
+     Artist(s):          Ed Sheeran
+
+     Song's name:        Shape of You
+
+     Spotify Preview:    https://p.scdn.co/mp3-preview/84462d8e1e4d0f9e5ccd06f0da390f65843774a2?cid=ff7f431a06364134a0e7aab9f4860cb8
+
+     Album:              ÷ (Deluxe)
+         
+...............................................
+1 
+     Artist(s):          Various Artists
+
+     Song's name:        Scared of the Dark (feat. XXXTENTACION)
+
+     Spotify Preview:    null
+
+     Album:              Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture)
+         
+...............................................
+1 
+          Name of the Venue:   Minibar
+          Venue Location:      Kansas City, MO, United States
+          Date of the Event:   02/11/2019
+          
+...............................................
+1 
+          Name of the Venue:   White Oak Music Hall
+          Venue Location:      Houston, TX, United States
+          Date of the Event:   02/15/2019
+          
+...............................................
+1 
+     Artist(s):          Various Artists
+
+     Song's name:        Scared of the Dark (feat. XXXTENTACION)
+
+     Spotify Preview:    null
+
+     Album:              Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture)
+         
+...............................................
+1 
+     Artist(s):          Ed Sheeran
+
+     Song's name:        Shape of You
+
+     Spotify Preview:    https://p.scdn.co/mp3-preview/84462d8e1e4d0f9e5ccd06f0da390f65843774a2?cid=ff7f431a06364134a0e7aab9f4860cb8
+
+     Album:              ÷ (Deluxe)
+         
+...............................................

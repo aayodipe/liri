@@ -28,7 +28,7 @@ switch (action) {
           break;
 
      case "do-what-it-says":
-          lotto();
+         readFromFile();
           break;
 
      default:
@@ -37,15 +37,14 @@ switch (action) {
 //Concert API
 function searchConcert() {
      let artist = (process.argv).slice(3)
-     //Save the Concert Name to the log file
-     addTofile('concert-this', artist)
+    
      artist = artist.join('+')
 
-     //Check to make input
+     //Check the userinput
      if (artist) {
           artist = artist         
      } else {
-          artist = nelly
+          artist = 'saves the day'
      }
 
 
@@ -64,11 +63,15 @@ function searchConcert() {
                let date = moment(res.datetime).format("MM/DD/YYYY")
 
                // display response
-               console.log(`
+               let result = 
+               `
           Name of the Venue:   ${res.venue.name}
           Venue Location:      ${res.venue.city}, ${res.venue.region}, ${res.venue.country}
           Date of the Event:   ${date}
-          `)
+          `
+          console.log(result)
+           //Save the Concert Name to the log file
+           addTofile(result)
           }
      );
 }
@@ -77,8 +80,7 @@ function searchConcert() {
 //OMBD movie request and response
 function searchMovie() {
      let movieName = (process.argv).slice(3)
-     //Save the Movie Name to the log file
-     addTofile('movie-this', movieName)
+  
      movieName = movieName.join('+')
 
      //Check to make input
@@ -100,7 +102,8 @@ function searchMovie() {
           function (response) {
 
                //OMDB RESPONSE    
-               console.log(`
+               let result = 
+               `
         Title:        ${response.data.Title}
         Year:         ${response.data.Year}
         IMDB Rating:  ${response.data.imdbRating}
@@ -110,7 +113,10 @@ function searchMovie() {
         Plot:         ${response.data.Plot}
         Actors:       ${response.data.Actors}
         Poster:       ${response.data.Poster}
-        `)
+        `
+        console.log(result)
+         //Save the Concert Name to the log file
+         addTofile(result)
           }
      );
 }
@@ -119,8 +125,7 @@ function searchMovie() {
 //Spotify Song
 function searchMusic(songName) {
      songName = (process.argv).slice(3)
-     //Save the Music Name to the log file
-     addTofile('spotify-this-song', songName)
+ 
      songName = songName.join('+')
 
      //Check to make input
@@ -140,7 +145,8 @@ function searchMusic(songName) {
           .then(function (response) {
                let resp = response.tracks.items[0]
 
-               console.log(`
+      let result = 
+      `
      Artist(s):          ${resp.album.artists[0].name}
 
      Song's name:        ${resp.name}
@@ -148,7 +154,10 @@ function searchMusic(songName) {
      Spotify Preview:    ${resp.preview_url}
 
      Album:              ${resp.album.name}
-         `)
+         `
+         console.log(result)
+         //Save the Concert Name to the log file
+         addTofile(result)
           })
           // The album that the song is from:${response.tracks.album.name}
           .catch(function (err) {
@@ -159,7 +168,7 @@ function searchMusic(songName) {
 }
 //Read from File
 let songNameread;
-function readFile1(){
+function readFromFile(){
 fs.readFile('random.txt', 'utf8', (err, data) => {
      if (err) {
           console.log(err)
@@ -167,18 +176,20 @@ fs.readFile('random.txt', 'utf8', (err, data) => {
     songNameread = data
 })
 }
-readFile1()
-console.log("this is :"+ songNameread)
+
 
 //Append File
-function addTofile(evt, userInput){
-
-     fs.appendFile('log.txt', evt +' '+ userInput.join(' ')+', ', err => {
+let i = 1
+function addTofile(evt){
+    
+     fs.appendFile('log.txt', i + ' '+ evt + '\n...............................................\n', err => {
           if (err) {
                console.log(err)
           }   
           console.log('Add Successful')    
+         
      })
+     i++
      }
 
      
