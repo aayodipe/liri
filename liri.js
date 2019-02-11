@@ -6,6 +6,7 @@ const keys = require("./keys.js");
 const Spotify = require('node-spotify-api');
 const spotify = new Spotify(keys.spotify);
 const axios = require('axios')
+const moment = require('moment')
 
 // Hold user action
 let action = process.argv[2]
@@ -14,15 +15,15 @@ let action = process.argv[2]
 // //User Options
 switch (action) {
 case "concert-this":
-concertThis(artist);
+searchConcert();
 break;
 
 case "spotify-this-song":
-searchMusic();
+//searchMusic();
 break;
 
 case "movie-this":
-searchMovie();
+//searchMovie();
 break;
 
 case "do-what-it-says":
@@ -33,6 +34,41 @@ default:
 console.log('Please provide and instruction')
 }
 //Concert API
+function searchConcert(){
+     let artist = (process.argv).slice(3)    
+     artist = artist.join('+')
+
+     //Check to make input
+     if (artist){
+          artist = artist
+     }else{
+          artist =nelly
+     }
+
+
+// request bandsinTown API
+let queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+
+// This line is just to help us debug against the actual URL.
+console.log(queryUrl);
+
+axios.get(queryUrl).then(
+     function (response) {
+      
+     //Bandintown response  
+     let res = response.data[0]
+     //format date
+     let date = moment(res.datetime).format("MM/DD/YYYY")
+  
+  // display response
+          console.log(`
+          Name of the Venue:   ${res.venue.name}
+          Venue Location:      ${res.venue.city}, ${res.venue.region}, ${res.venue.country}
+          Date of the Event:   ${date}
+          `)
+     }
+);
+}
 
 
 //OMBD movie request and response
@@ -49,7 +85,7 @@ function searchMovie(){
     
 
 // request OMBD API
-var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+let queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
 
 // This line is just to help us debug against the actual URL.
 console.log(queryUrl);
@@ -92,13 +128,13 @@ spotify
       let resp = response.tracks.items[0]
      
     console.log(`
-     Artist(s):${resp.album.artists[0].name}
+     Artist(s):          ${resp.album.artists[0].name}
 
-     The song's name:${resp.name}
+     Song's name:        ${resp.name}
 
-     A preview link of the song from Spotify:${resp.preview_url}
+     Spotify Preview:    ${resp.preview_url}
 
-     The album that the song is from:${resp.album.name}
+     Album:              ${resp.album.name}
          `)
   })
   // The album that the song is from:${response.tracks.album.name}
