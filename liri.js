@@ -11,14 +11,14 @@ const axios = require('axios')
 let action = process.argv[2]
 
 
-//User Options
+// //User Options
 switch (action) {
 case "concert-this":
 concertThis(artist);
 break;
 
 case "spotify-this-song":
-playSpotify();
+searchMusic();
 break;
 
 case "movie-this":
@@ -56,36 +56,54 @@ console.log(queryUrl);
 
 axios.get(queryUrl).then(
      function (response) {
-          console.log("Release Year: " + response.data.Year);
-          console.log(`
-        Title of the movie: ${response.data.Title}
-        Year the movie came out:${response.data.Year}
-        IMDB Rating of the movie:${response.data.imdbRating}
-        Rotten Tomatoes Rating of the movie:${response.data.Rated}
-        Country where the movie was produced:${response.data.Country}
-        Language of the movie:${response.data.Language}
-        Plot of the movie:${response.data.Plot}
-        Actors in the movie:${response.data.Actors}
-        Poster of the movie:${response.data.Poster}
 
-        
+     //OMDB RESPONSE    
+          console.log(`
+        Title:        ${response.data.Title}
+        Year:         ${response.data.Year}
+        IMDB Rating:  ${response.data.imdbRating}
+        RT. Rating:   ${response.data.Rated}
+        Country:      ${response.data.Country}
+        Language:     ${response.data.Language}
+        Plot:         ${response.data.Plot}
+        Actors:       ${response.data.Actors}
+        Poster:       ${response.data.Poster}
         `)
      }
 );
 }
 
 
+//Spotify Song
+function searchMusic(){
+     let songName = (process.argv).slice(3)    
+     songName = songName.join('+')
 
+     //Check to make input
+     if (songName){
+          songName = songName
+     }else{
+          songName ='The Sign'
+     }
+     
+spotify
+  .search({ type: 'track', query: songName,limit:1 })
+  .then(function(response) {
+      let resp = response.tracks.items[0]
+     
+    console.log(`
+     Artist(s):${resp.album.artists[0].name}
 
+     The song's name:${resp.name}
 
-// function playSpotify(){
-// spotify
-//   .search({ type: 'track', query: 'I Want it That Way',limit:1 })
-//   .then(function(response) {
-//     console.log(response);
-//   })
-//   .catch(function(err) {
-//     console.log(err);
-//   });
+     A preview link of the song from Spotify:${resp.preview_url}
 
-// }
+     The album that the song is from:${resp.album.name}
+         `)
+  })
+  // The album that the song is from:${response.tracks.album.name}
+  .catch(function(err) {
+    console.log(err);
+  });
+
+}
