@@ -19,10 +19,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 To used this application as a developer or for any purpose other than end-user, Follow the instruction below.
 
 * Clone the appication to your local machine using ```git clone https://github.com/aayodipe/liri-node-app.git ```
-* Open the directory(folder) to which the project was cloned (saved) to which you command line or git bash or terminal then run ```cd Swerve```
-* From the root folder, run ```npm install``` to install all the dependencies.
-* Then run  ``` cd client``` follow by ``` npm install ``` 
-* The last two instructions, was to install all the dependencies used in developing this application.
-* Then run ``` cd ..``` to go back to the root of the folder.
+* Open the directory(folder) to which the project was cloned (saved) to which you command line or git bash or terminal then run ```cd Liri-node-app```
+* From the root folder, run ```npm install``` to install all the dependencies.This instructions is to install all the dependencies used in developing this application.
 Finally, run ``` npm start ``` to start the application.
 
